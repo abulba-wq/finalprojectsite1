@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntelle - Парфумерія</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="#" data-page="home" aria-label="Syntelle на головну">Syntelle</a>
+
+        <form class="search" role="search">
+            <input type="search" aria-label="Пошук товару" placeholder="Пошук товару">
+            <button type="submit" aria-label="Знайти">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+            </button>
+        </form>
+
+        <button class="nav-button" type="button">Каталог</button>
+        <button class="nav-button" type="button">Майстер-клас</button>
+
+        <nav class="icons" aria-label="Швидкі дії">
+            <button type="button" aria-label="Профіль" id="account-button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3.5"></circle><path d="M5 21v-2.5a7 7 0 0 1 14 0V21z"></path></svg>
+            </button>
+            <button type="button" aria-label="Вибране" id="favorites-button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8z"></path></svg>
+                <span id="favorites-count" class="cart-count" hidden>0</span>
+            </button>
+            <button type="button" aria-label="Кошик" id="cart-button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.5 11h9.7l2.3-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg>
+                <span id="cart-count" class="cart-count" hidden>0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-page" class="page active">
+            <section class="hero">
+                <h1>Syntelle</h1>
+                <p>Довіртеся нашій майстерності до парфумерії.</p>
+                <button class="primary-button" type="button" data-scroll="catalog">Почати</button>
+            </section>
+
+            <section class="catalog" id="catalog" aria-label="Каталог парфумів">
+                <div class="category-strip" aria-label="Категорії парфумів">
+                    <button type="button" data-category="all" class="active">Парфуми</button>
+                    <button type="button" data-category="Ранковий дотик">Ранковий дотик</button>
+                    <button type="button" data-category="Зелений сад">Зелений сад</button>
+                    <button type="button" data-category="Сонячний вітер">Сонячний вітер</button>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card" data-name="Ранковий дотик">
+                        <button class="product-image" type="button" data-product="0" aria-label="Відкрити Ранковий дотик">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=85" alt="Флакон парфумів">
+                            <span class="heart" aria-hidden="true">♡</span>
+                        </button>
+                        <h2>Парфуми</h2>
+                        <p>5000 грн</p>
+                    </article>
+                    <article class="product-card featured" data-name="Зелений сад">
+                        <button class="product-image" type="button" data-product="1" aria-label="Відкрити Зеленый сад">
+                            <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=700&q=85" alt="Пляшка парфумів серед рослин">
+                            <span class="heart" aria-hidden="true">♡</span>
+                        </button>
+                        <h2>Парфуми</h2>
+                        <p>5000 грн</p>
+                    </article>
+                    <article class="product-card" data-name="Сонячний вітер">
+                        <button class="product-image" type="button" data-product="2" aria-label="Відкрити Сонячний вітер">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=85" alt="Парфуми на сонці">
+                            <span class="heart" aria-hidden="true">♡</span>
+                        </button>
+                        <h2>Парфуми</h2>
+                        <p>5000 грн</p>
+                    </article>
+                    <article class="product-card" data-name="Шкіряний акорд">
+                        <button class="product-image" type="button" data-product="3" aria-label="Відкрити Шкіряний акорд">
+                            <img src="https://images.unsplash.com/photo-1616604847711-0a7f4b5d5a65?auto=format&fit=crop&w=700&q=85" alt="Коричневий флакон парфумів">
+                            <span class="heart" aria-hidden="true">♡</span>
+                        </button>
+                        <h2>Парфуми</h2>
+                        <p>5000 грн</p>
+                    </article>
+                    <article class="product-card" data-name="Квіткова ніч">
+                        <button class="product-image" type="button" data-product="4" aria-label="Відкрити Квіткова ніч">
+                            <img src="https://images.unsplash.com/photo-1595535373192-fcdd9bdfc7e2?auto=format&fit=crop&w=700&q=85" alt="Парфуми з квітами">
+                            <span class="heart" aria-hidden="true">♡</span>
+                        </button>
+                        <h2>Парфуми</h2>
+                        <p>5000 грн</p>
+                    </article>
+                    <article class="product-card" data-name="Чиста вода">
+                        <button class="product-image" type="button" data-product="5" aria-label="Відкрити Чиста вода">
+                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=700&q=85" alt="Парфуми на світлому тлі">
+                            <span class="heart" aria-hidden="true">♡</span>
+                        </button>
+                        <h2>Парфуми</h2>
+                        <p>5000 грн</p>
+                    </article>
+                </div>
+                <button class="catalog-arrow arrow-left" type="button" aria-label="Попередні товари">‹</button>
+                <button class="catalog-arrow arrow-right" type="button" aria-label="Наступні товари">›</button>
+            </section>
+
+        </section>
+
+        <section id="product-page" class="page product-page">
+            <div class="product-layout">
+                <div class="product-photo">
+                    <img id="detail-image" src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=900&q=90" alt="Зелений сад">
+                </div>
+                <div class="product-specs">
+                    <h1>Характеристики</h1>
+                    <dl>
+                        <div><dt>Країна виробництва</dt><dd>Франція</dd></div>
+                        <div><dt>Типи аромату</dt><dd>Індивідуальні засоби, квіткові, мускусні</dd></div>
+                        <div><dt>Фруктові ноти</dt><dd>Вишня, Беріз, Сандал</dd></div>
+                        <div><dt>Кінцеві ноти</dt><dd>Весь кремово-альдегід</dd></div>
+                        <div><dt>Клас ароматотвору</dt><dd>Деревні, Мускусні</dd></div>
+                        <div><dt>Вид</dt><dd>Парфумована вода</dd></div>
+                        <div><dt>Обєм</dt><dd>60 мл</dd></div>
+                        <div><dt>Клас</dt><dd>Елітне</dd></div>
+                        <div><dt>Група</dt><dd>Унісекс</dd></div>
+                        <div><dt>Основні акорди</dt><dd>Деревний, квітковий, мускусний, пряний</dd></div>
+                        <div><dt>Призначення нот</dt><dd>Принор чоловік, жінокішка</dd></div>
+                    </dl>
+                </div>
+            </div>
+            <article class="product-copy">
+                <h2 id="detail-name">Green Flora</h2>
+                <p><strong>Оригінальний нішевий аромат із виразною авторською композицією.</strong></p>
+                <p>Цей парфум представляє збалансовану композицію із квітковими та деревними акорди. Свіжість верхніх нот плавно переходить у глибокий серцевий характер і теплу стійку основу.</p>
+                <p>Аромат розкривається поступово протягом дня, змінюючи акценти від легких квіткових і цитрусних нот до мускусно-древесної бази.</p>
+                <button id="add-to-cart" class="primary-button add-to-cart" type="button">Додати до кошика</button>
+            </article>
+        </section>
+
+        <section id="cart-page" class="page cart-page">
+            <h1>Кошик</h1>
+            <div class="cart-layout">
+                <div id="cart-items" class="cart-items"></div>
+                <aside class="cart-summary">
+                    <h2>Разом</h2>
+                    <div><span>Товари</span><strong id="cart-total">0 грн</strong></div>
+                    <button id="checkout-button" class="primary-button" type="button">Оформити замовлення</button>
+                </aside>
+            </div>
+        </section>
+
+        <section id="checkout-page" class="page checkout-page">
+            <h1>Оформлення замовлення</h1>
+            <form id="checkout-form" class="checkout-layout">
+                <div class="checkout-fields">
+                    <label>Ім’я та прізвище<input name="name" required></label>
+                    <label>Телефон<input name="phone" type="tel" required></label>
+                    <label>Місто<input name="city" required></label>
+                    <label>Адреса доставки<input name="address" required></label>
+                    <label>Коментар<textarea name="comment" rows="4"></textarea></label>
+                </div>
+                <aside class="checkout-summary">
+                    <h2>Ваше замовлення</h2>
+                    <div id="checkout-items"></div>
+                    <strong id="checkout-total">0 грн</strong>
+                    <button class="primary-button" type="submit">Підтвердити замовлення</button>
+                </aside>
+            </form>
+        </section>
+
+        <section id="favorites-page" class="page favorites-page">
+            <h1>Вподобані товари</h1>
+            <div id="favorites-grid" class="favorites-grid"></div>
+        </section>
+
+        <section id="account-page" class="page account-page">
+            <div class="account-card">
+                <h1>Створити акаунт</h1>
+                <form id="account-form">
+                    <label>Ім’я<input name="name" required></label>
+                    <label>Email<input name="email" type="email" required></label>
+                    <label>Пароль<input name="password" type="password" minlength="6" required></label>
+                    <button class="primary-button" type="submit">Зареєструватися</button>
+                </form>
+                <p id="account-message" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section id="masterclass-page" class="page masterclass-page">
+            <div class="masterclass-hero">
+                <p class="eyebrow">Авторський івент Syntelle</p>
+                <h1>Майстер-клас зі створення парфуму</h1>
+                <p>Познайомтеся з основами нішевої парфумерії, вивчіть верхні, серцеві та базові ноти та складіть власну авторську композицію з допомогою професійного парфумера.</p>
+            </div>
+
+            <div class="masterclass-details">
+                <article>
+                    <span>01</span>
+                    <h2>Знайомство з ароматами</h2>
+                    <p>Порівняння ароматичних родин і принципи піраміди парфуму.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h2>Створення композиції</h2>
+                    <p>Практична робота над обраними нотами під керівництвом майстра.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h2>Власний флакон</h2>
+                    <p>Розлив аромату у флакон об’ємом 30 мл та пам’ятка композиції.</p>
+                </article>
+            </div>
+
+            <div class="masterclass-booking">
+                <div class="booking-info">
+                    <h2>Вільні години</h2>
+                    <p>Субота, 29 листопада — 12:00</p>
+                    <p>Неділя, 30 листопада — 15:00</p>
+                    <p>Субота, 6 грудня — 12:00</p>
+                    <p><strong>Учасників:</strong> до 8 осіб</p>
+                    <p><strong>Вартість:</strong> 2 500 грн</p>
+                </div>
+                <form id="masterclass-form" class="masterclass-form">
+                    <h2>Записатися</h2>
+                    <label>Ім’я<input name="name" required></label>
+                    <label>Телефон<input name="phone" type="tel" required></label>
+                    <label>Дата
+                        <select name="date" required>
+                            <option value="">Оберіть дату</option>
+                            <option>Субота, 29 листопада — 12:00</option>
+                            <option>Неділя, 30 листопада — 15:00</option>
+                            <option>Субота, 6 грудня — 12:00</option>
+                        </select>
+                    </label>
+                    <button class="primary-button" type="submit">Записатися на майстер-клас</button>
+                    <p id="masterclass-message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="brand footer-brand" href="#" data-page="home">Syntelle</a>
+        <div class="footer-links">
+            <a href="#">Головна</a>
+            <a href="#" id="footer-cart">Кошик</a>
+            <a href="#">Доставка</a>
+            <a href="#">Каталог</a>
+            <a href="#">Вибране</a>
+            <a href="#">Контакти</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
